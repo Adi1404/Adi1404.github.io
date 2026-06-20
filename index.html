@@ -88,11 +88,27 @@ body:has(a:hover) #cursor-dot, body:has(button:hover) #cursor-dot { transform: t
   border-color: var(--nborder);
 }
 .nav-logo {
-  display: flex; align-items: center; gap: 12px;
-  font-size: 13px; font-weight: 700;
-  letter-spacing: 0.06em; color: var(--text-d);
+  display: flex; align-items: center; gap: 14px;
+  text-decoration: none;
 }
-.nav-mark { width: 28px; height: 28px; flex-shrink: 0; }
+.nav-mark { width: 30px; height: 30px; flex-shrink: 0; }
+.nav-divider {
+  width: 1.5px; height: 28px;
+  background: linear-gradient(to bottom, transparent, rgba(255,107,0,0.5), transparent);
+}
+.nav-wordmark { display: flex; flex-direction: column; gap: 2px; }
+.nav-first {
+  font-size: 14px; font-weight: 900;
+  letter-spacing: 0.14em; line-height: 1;
+  background: linear-gradient(135deg, #FF6B00 0%, #FF9A00 45%, #FFD700 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.nav-last {
+  font-size: 7.5px; font-weight: 500;
+  letter-spacing: 0.35em; line-height: 1;
+  color: #8A7A62; padding-left: 1px;
+}
 .nav-links {
   display: flex; align-items: center; gap: 36px;
   font-size: 13px; font-weight: 500; color: var(--muted-d);
@@ -763,10 +779,12 @@ footer {
   border-top: 1px solid rgba(255,255,255,0.06);
 }
 .footer-logo {
-  display: flex; align-items: center; gap: 10px;
-  font-size: 13px; font-weight: 700; color: var(--text-d);
+  display: flex; align-items: center; gap: 12px;
 }
-.footer-logo svg { width: 24px; height: 24px; }
+.footer-logo svg { width: 28px; height: 28px; flex-shrink: 0; }
+.footer-logo .nav-divider { height: 24px; }
+.footer-logo .nav-first { font-size: 12px; }
+.footer-logo .nav-last  { font-size: 6.5px; letter-spacing: 0.3em; }
 .footer-links {
   display: flex; gap: 28px;
   font-size: 12px; color: var(--muted-d);
@@ -823,11 +841,15 @@ footer {
           <stop offset="100%" stop-color="#FFD700"/>
         </linearGradient>
       </defs>
-      <polygon points="70,10 10,116 130,116" fill="none" stroke="url(#ng)" stroke-width="7" stroke-linejoin="miter"/>
-      <polygon points="70,100 35,42 105,42" fill="none" stroke="#FF7F1E" stroke-width="4.5" stroke-linejoin="miter" opacity="0.9"/>
-      <circle cx="70" cy="10" r="7" fill="#FFD700"/>
+      <polygon points="70,10 10,116 130,116" fill="none" stroke="url(#ng)" stroke-width="8" stroke-linejoin="miter"/>
+      <polygon points="70,100 35,42 105,42" fill="none" stroke="#FF7F1E" stroke-width="5" stroke-linejoin="miter" opacity="0.9"/>
+      <circle cx="70" cy="10" r="9" fill="#FFD700"/>
     </svg>
-    Aditya Patel
+    <div class="nav-divider"></div>
+    <div class="nav-wordmark">
+      <div class="nav-first">ADITYA</div>
+      <div class="nav-last">PATEL</div>
+    </div>
   </a>
   <div class="nav-links">
     <a href="#about">About</a>
@@ -1245,11 +1267,22 @@ footer {
 <footer>
   <div class="footer-logo">
     <svg viewBox="0 0 140 130" fill="none">
-      <polygon points="70,10 10,116 130,116" fill="none" stroke="#FF7F1E" stroke-width="7" stroke-linejoin="miter"/>
-      <polygon points="70,100 35,42 105,42" fill="none" stroke="#FF9A00" stroke-width="4.5" stroke-linejoin="miter"/>
-      <circle cx="70" cy="10" r="7" fill="#FFD700"/>
+      <defs>
+        <linearGradient id="fg" x1="0.5" y1="1" x2="0.5" y2="0">
+          <stop offset="0%" stop-color="#FF4500"/>
+          <stop offset="55%" stop-color="#FF7F1E"/>
+          <stop offset="100%" stop-color="#FFD700"/>
+        </linearGradient>
+      </defs>
+      <polygon points="70,10 10,116 130,116" fill="none" stroke="url(#fg)" stroke-width="8" stroke-linejoin="miter"/>
+      <polygon points="70,100 35,42 105,42" fill="none" stroke="#FF7F1E" stroke-width="5" stroke-linejoin="miter" opacity="0.9"/>
+      <circle cx="70" cy="10" r="9" fill="#FFD700"/>
     </svg>
-    Aditya Patel
+    <div class="nav-divider"></div>
+    <div class="nav-wordmark">
+      <div class="nav-first">ADITYA</div>
+      <div class="nav-last">PATEL</div>
+    </div>
   </div>
   <div class="footer-links">
     <a href="https://github.com/Adi1404" target="_blank">GitHub</a>
