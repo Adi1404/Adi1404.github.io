@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 130" width="200" height="200" role="img" aria-label="Aditya Patel — Shakti Mark">
+  <defs>
+    <linearGradient id="g" x1="0.5" y1="1" x2="0.5" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#FF4500"/>
+      <stop offset="55%"  stop-color="#FF7F1E"/>
+      <stop offset="100%" stop-color="#FFD700"/>
+    </linearGradient>
+  </defs>
+  <!-- Outer upward triangle -->
+  <polygon points="70,10 10,116 130,116" fill="none" stroke="url(#g)" stroke-width="4" stroke-linejoin="miter"/>
+  <!-- Inner downward triangle (Shakti) -->
+  <polygon points="70,100 35,42 105,42" fill="none" stroke="#FF7F1E" stroke-width="2.5" stroke-linejoin="miter" opacity="0.9"/>
+  <!-- Apex dot -->
+  <circle cx="70" cy="10" r="4.5" fill="#FFD700"/>
+  <!-- Base line -->
+  <line x1="10" y1="122" x2="130" y2="122" stroke="#FF4500" stroke-width="1.5" opacity="0.5"/>
+</svg>
